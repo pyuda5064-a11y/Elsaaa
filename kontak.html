@@ -62,6 +62,205 @@
     </iframe>
 
 </section>
+    <section id="kontak" class="contact-section">
+  <div class="contact-container">
+
+    <div class="contact-header">
+      <h2>Kontak</h2>
+      <p>Silakan isi pesan Anda melalui form di bawah ini.</p>
+    </div>
+
+    <form id="formPesan">
+
+      <!-- ID -->
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input
+          type="text"
+          id="id"
+          name="id"
+          placeholder="Masukkan ID"
+          required
+        >
+      </div>
+
+      <!-- Nama -->
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Masukkan nama"
+          required
+        >
+      </div>
+
+      <!-- Keterangan -->
+      <div class="form-group">
+        <label for="keterangan">Keterangan / Pesan</label>
+        <textarea
+          id="keterangan"
+          name="keterangan"
+          rows="5"
+          placeholder="Tuliskan pesan Anda..."
+          required
+        ></textarea>
+      </div>
+
+      <!-- Tanggal -->
+      <div class="form-group">
+        <label for="tanggal">Tanggal</label>
+        <input
+          type="date"
+          id="tanggal"
+          name="tanggal"
+          required
+        >
+      </div>
+
+      <!-- Tombol -->
+      <button type="submit" id="btnKirim">
+        Kirim Pesan
+      </button>
+
+      <!-- Status -->
+      <div id="statusPesan"></div>
+
+    </form>
+  </div>
+</section>
+
+
+<style>
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  #btnKirim {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #1976d2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #btnKirim:hover {
+    background: #125ca1;
+  }
+
+  #btnKirim:disabled {
+    background: #999;
+    cursor: not-allowed;
+  }
+
+  #statusPesan {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+</style>
+
+
+<script>
+  document.getElementById("formPesan").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const tombol = document.getElementById("btnKirim");
+    const status = document.getElementById("statusPesan");
+
+    const data = {
+      id: document.getElementById("id").value,
+      nama: document.getElementById("nama").value,
+      keterangan: document.getElementById("keterangan").value,
+      tanggal: document.getElementById("tanggal").value
+    };
+
+    tombol.disabled = true;
+    tombol.innerText = "Mengirim...";
+
+    google.script.run
+      .withSuccessHandler(function(response) {
+
+        if (response.success) {
+
+          status.style.color = "green";
+          status.innerText = "✓ " + response.message;
+
+          document.getElementById("formPesan").reset();
+
+        } else {
+
+          status.style.color = "red";
+          status.innerText = "✗ " + response.message;
+
+        }
+
+        tombol.disabled = false;
+        tombol.innerText = "Kirim Pesan";
+
+      })
+
+      .withFailureHandler(function(error) {
+
+        status.style.color = "red";
+        status.innerText = "✗ Gagal mengirim pesan";
+
+        console.error(error);
+
+        tombol.disabled = false;
+        tombol.innerText = "Kirim Pesan";
+
+      })
+
+      .simpanData(data);
+
+  });
+</script>
+
 
 <footer>
     <h3>Dusun Permai - Desa Sepadu</h3>
