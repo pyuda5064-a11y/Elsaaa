@@ -3,88 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dusun Permai | Desa Sepadu</title>
+    <title>Sepadu • Dusun Permai</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h2>Dusun <span>Permai</span></h2>
+    <nav class="navbar">
+        <a href="index.html" class="logo">SEPADU<span>.</span></a>
 
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="profil.html">Profil</a></li>
-            <li><a href="potensi.html">Potensi</a></li>
-            <li><a href="galeri.html">Galeri</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-        </ul>
+        <div class="nav-links">
+            <a class="active" href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="lokasi.html">Lokasi</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 </header>
 
-<section class="hero">
+<main class="hero">
+
     <div class="hero-content">
-        <p>DESA SEPADU • KECAMATAN SEMPARUK</p>
+        <p class="small-title">WELCOME TO</p>
 
-        <h1>Selamat Datang<br>
-        di Dusun Permai</h1>
+        <h1>
+            Desa<br>
+            <span>Sepadu</span>
+        </h1>
 
-        <p>
-            Mengenal keindahan, kehidupan masyarakat,
-            serta potensi Dusun Permai, Desa Sepadu,
-            Kabupaten Sambas.
+        <p class="description">
+            Sebuah tempat sederhana dengan cerita,
+            kehidupan, dan keindahan yang tersimpan
+            di Dusun Permai.
         </p>
 
-        <a href="profil.html" class="btn">Jelajahi Sekarang</a>
-    </div>
-</section>
-
-<section class="section">
-    <div class="title">
-        <h2>Pesona Dusun Permai</h2>
-        <p>Lingkungan pedesaan yang asri dan penuh potensi.</p>
+        <a href="profil.html" class="btn">
+            Jelajahi Website →
+        </a>
     </div>
 
-    <div class="cards">
-
-        <div class="card">
-            <img src="IMG20260829140550.jpg">
-            <h3>🌱 Lingkungan Asri</h3>
-            <p>
-                Suasana pedesaan yang tenang dengan
-                lingkungan hijau dan nyaman.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="IMG-20260902-WA0104.jpg">
-            <h3>🌾 Pertanian</h3>
-            <p>
-                Pertanian menjadi salah satu potensi
-                penting bagi masyarakat Dusun Permai.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="file_000000004e2881f5bd64ad4108eb7984.png">
-            <h3>🌳 Keindahan Alam</h3>
-            <p>
-                Pemandangan alam pedesaan yang
-                memberikan suasana nyaman.
-            </p>
-        </div>
-
+    <div class="hero-decoration">
+        <div class="circle"></div>
+        <div class="vertical-text">DUSUN PERMAI • KALIMANTAN BARAT</div>
     </div>
+
+</main>
+
+<section class="quote-section">
+    <p>“Tempat pulang selalu memiliki cerita yang berbeda.”</p>
 </section>
 
 <footer>
-    <h3>Dusun Permai - Desa Sepadu</h3>
-    <p>Kecamatan Semparuk, Kabupaten Sambas, Kalimantan Barat</p>
+    <p>© 2026 Desa Sepadu • Dusun Permai</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-                    
