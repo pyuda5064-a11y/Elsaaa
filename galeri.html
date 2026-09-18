@@ -1,57 +1,155 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Dusun Permai</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Galeri • Sepadu</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h2>Dusun <span>Permai</span></h2>
 
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="profil.html">Profil</a></li>
-            <li><a href="potensi.html">Potensi</a></li>
-            <li><a href="galeri.html">Galeri</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-        </ul>
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            SEPADU<span>.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">Beranda</a>
+
+            <a href="profil.html">Profil</a>
+
+            <a class="active" href="galeri.html">
+                Galeri
+            </a>
+
+            <a href="lokasi.html">
+                Lokasi
+            </a>
+
+            <a href="kontak.html">
+                Kontak
+            </a>
+
+        </div>
+
+        <button class="menu-btn"
+                onclick="toggleMenu()">☰</button>
+
     </nav>
+
 </header>
 
+
 <section class="page-header">
-    <h1>Galeri</h1>
-    <p>Suasana pedesaan dan keindahan alam</p>
+
+    <p class="small-title">
+        VISUAL STORY
+    </p>
+
+    <h1>
+        Galeri <span>Sepadu</span>
+    </h1>
+
+    <p>
+        Ruang untuk menyimpan foto,
+        cerita, dan kenangan.
+    </p>
+
 </section>
 
-<section class="section">
 
-    <div class="gallery">
+<section class="gallery">
 
-        <img src="IMG_20260829_154550.jpg">
+    <div class="gallery-item large">
 
-        <img src="IMG_20260829_163032.jpg">
+        <div class="gallery-placeholder">
+            SEPADU
+        </div>
 
-        <img src="IMG20260829140253.jpg">
+        <div class="gallery-caption">
+            <span>01</span>
+            <h3>Suasana Desa</h3>
+        </div>
 
-        <img src="IMG-20260829-WA0101.jpg">
+    </div>
 
-        <img src="IMG-20260902-WA0108.jpg">
 
-        <img src="IMG-20260829-WA0089.jpg">
+    <div class="gallery-item">
+
+        <div class="gallery-placeholder green">
+            PERMAI
+        </div>
+
+        <div class="gallery-caption">
+            <span>02</span>
+            <h3>Dusun Permai</h3>
+        </div>
+
+    </div>
+
+
+    <div class="gallery-item">
+
+        <div class="gallery-placeholder brown">
+            SAMBAS
+        </div>
+
+        <div class="gallery-caption">
+            <span>03</span>
+            <h3>Kehidupan Lokal</h3>
+        </div>
+
+    </div>
+
+
+    <div class="gallery-item">
+
+        <div class="gallery-placeholder blue">
+            BORNEO
+        </div>
+
+        <div class="gallery-caption">
+            <span>04</span>
+            <h3>Kalimantan Barat</h3>
+        </div>
+
+    </div>
+
+
+    <div class="gallery-item">
+
+        <div class="gallery-placeholder gold">
+            SEPADU
+        </div>
+
+        <div class="gallery-caption">
+            <span>05</span>
+            <h3>Kenangan</h3>
+        </div>
 
     </div>
 
 </section>
 
+
 <footer>
-    <h3>Dusun Permai - Desa Sepadu</h3>
-    <p>Kecamatan Semparuk, Kabupaten Sambas</p>
+    <p>© 2026 Desa Sepadu • Dusun Permai</p>
 </footer>
 
+<script src="script.js"></script>
+
 </body>
-          </html>
+    </html>
