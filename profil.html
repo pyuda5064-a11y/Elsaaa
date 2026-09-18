@@ -3,83 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Dusun Permai</title>
+
+    <title>Profil • Desa Sepadu</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h2>Dusun <span>Permai</span></h2>
+    <nav class="navbar">
 
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="profil.html">Profil</a></li>
-            <li><a href="potensi.html">Potensi</a></li>
-            <li><a href="galeri.html">Galeri</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-        </ul>
+        <a href="index.html" class="logo">
+            SEPADU<span>.</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Beranda</a>
+            <a class="active" href="profil.html">Profil</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="lokasi.html">Lokasi</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
     </nav>
 </header>
 
 <section class="page-header">
-    <h1>Profil Dusun Permai</h1>
-    <p>Desa Sepadu, Kecamatan Semparuk, Kabupaten Sambas</p>
+
+    <p class="small-title">ABOUT THE PLACE</p>
+
+    <h1>
+        Tentang <span>Sepadu</span>
+    </h1>
+
+    <p>
+        Mengenal lebih dekat Dusun Permai,
+        Desa Sepadu.
+    </p>
+
 </section>
 
-<section class="section">
+<section class="content-section">
 
-    <div class="content">
-        <h2>Tentang Dusun Permai</h2>
+    <div class="text-box">
+
+        <p class="number">01</p>
+
+        <h2>Dusun Permai</h2>
 
         <p>
-            Dusun Permai merupakan salah satu wilayah yang
-            berada di Desa Sepadu, Kecamatan Semparuk,
-            Kabupaten Sambas, Kalimantan Barat.
+            Dusun Permai merupakan salah satu dusun
+            yang berada di Desa Sepadu, Kecamatan
+            Semparuk, Kabupaten Sambas, Kalimantan Barat.
         </p>
 
         <p>
-            Dusun ini memiliki suasana pedesaan yang tenang,
-            lingkungan yang hijau, serta aktivitas masyarakat
-            yang erat dengan kehidupan pertanian.
+            Wilayah ini menjadi bagian dari kehidupan
+            masyarakat Desa Sepadu dengan suasana
+            pedesaan yang tenang dan kehidupan
+            masyarakat yang dekat dengan lingkungan.
         </p>
-    </div>
-
-    <div class="cards">
-
-        <div class="info">
-            <h3>📍 Lokasi</h3>
-            <p>
-                Dusun Permai, Desa Sepadu,
-                Kecamatan Semparuk, Kabupaten Sambas.
-            </p>
-        </div>
-
-        <div class="info">
-            <h3>🌾 Mata Pencaharian</h3>
-            <p>
-                Salah satu aktivitas masyarakat adalah
-                bidang pertanian.
-            </p>
-        </div>
-
-        <div class="info">
-            <h3>🤝 Masyarakat</h3>
-            <p>
-                Kehidupan masyarakat pedesaan yang
-                mengutamakan kebersamaan dan gotong royong.
-            </p>
-        </div>
 
     </div>
 
+    <div class="info-card">
+
+        <div>
+            <span>Desa</span>
+            <strong>Sepadu</strong>
+        </div>
+
+        <div>
+            <span>Dusun</span>
+            <strong>Permai</strong>
+        </div>
+
+        <div>
+            <span>Kecamatan</span>
+            <strong>Semparuk</strong>
+        </div>
+
+        <div>
+            <span>Kabupaten</span>
+            <strong>Sambas</strong>
+        </div>
+
+        <div>
+            <span>Provinsi</span>
+            <strong>Kalimantan Barat</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quote-section dark">
+    <p>
+        “Kesederhanaan sebuah desa
+        menyimpan keindahan yang tidak selalu terlihat.”
+    </p>
 </section>
 
 <footer>
-    <h3>Dusun Permai - Desa Sepadu</h3>
-    <p>Kecamatan Semparuk, Kabupaten Sambas</p>
+    <p>© 2026 Desa Sepadu • Dusun Permai</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
-  </html>
+</html>
